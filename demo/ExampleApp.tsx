@@ -44,15 +44,14 @@ import '../styles/index.less';
 import './example.less';
 
 // tslint:disable-next-line no-var-requires
-const gitHubLogo = require('./GitHub-Mark-Light-32px.png');
 // tslint:disable-next-line no-var-requires
 const { version } = require('../package.json');
 
 let windowCount = 3;
 
 export const THEMES = {
-  ['Blueprint']: 'mosaic-blueprint-theme',
   ['Blueprint Dark']: classNames('mosaic-blueprint-theme', Classes.DARK),
+  ['Blueprint']: 'mosaic-blueprint-theme',
   ['None']: '',
 };
 
@@ -82,7 +81,7 @@ export class ExampleApp extends React.PureComponent<{}, ExampleAppState> {
       },
       splitPercentage: 40,
     },
-    currentTheme: 'Blueprint',
+    currentTheme: 'Blueprint Dark',
   };
 
   render() {
@@ -164,11 +163,10 @@ export class ExampleApp extends React.PureComponent<{}, ExampleAppState> {
     return (
       <div className={classNames(Classes.NAVBAR, Classes.DARK)}>
         <div className={Classes.NAVBAR_GROUP}>
-          <div className="pt-logo" />
           <div className={Classes.NAVBAR_HEADING}>
-            <a href="https://github.com/palantir/react-mosaic">
-              react-mosaic <span className="version">v{version}</span>
-            </a>
+            
+              Example <span className="version">v{version}</span>
+            
           </div>
         </div>
         <div className={classNames(Classes.NAVBAR_GROUP, Classes.BUTTON_GROUP)}>
@@ -195,9 +193,6 @@ export class ExampleApp extends React.PureComponent<{}, ExampleAppState> {
           >
             Add Window to Top Right
           </button>
-          <a className="github-link" href="https://github.com/palantir/react-mosaic">
-            <img src={gitHubLogo} />
-          </a>
         </div>
       </div>
     );
