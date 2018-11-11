@@ -193,6 +193,11 @@ export class ExampleApp extends React.PureComponent<{}, ExampleAppState> {
           >
             Add Window to Top Right
           </button>
+          <button
+            className={classNames(Classes.BUTTON, Classes.iconClass(IconNames.COG))}
+            onClick={()=>console.log(this.state)}
+          >
+          </button>
         </div>
       </div>
     );
